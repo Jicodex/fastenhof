@@ -1,0 +1,426 @@
+/* ========== min-width 300px to max-width 575.99px  */
+@media (min-width: 300px) and (max-width: 575.99px) { 
+section#top_nav p span{
+	display: none;
+}
+.mobile_logo img {
+	height: 37px;
+}
+#header::before {
+	height: 77px;
+}
+#header .navbar .navbar-nav.left-nav {
+	padding-top: 20px;
+}
+#banner_area {
+	margin-top: 20px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem) !important;
+	padding-left: var(--bs-gutter-x,.75rem) !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+#course_booking_area {
+	margin-top: 21px;
+}
+#course_booking_area .course_area_title h3 {
+	font-size: 27px;
+}
+#course_booking_area .course_area_title h3 span {
+	font-size: 34px;
+}
+.course_booking_tab_button button p {
+	padding-top: 8px;
+	padding-bottom: 11px;
+}
+.left-nav, .right-nav {
+	padding-top: 20px;
+}
+#course_booking_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.course_booking_tab_button_last{
+    margin-top: 20px;
+}
+.person_selected_box {
+	margin-top: 20px;
+	height: auto !important;
+}
+.person_selected_box .person_option_checkbox {
+	height: auto !important;
+	margin-top: 20px;
+}
+.person_option {
+	height: auto;
+}
+.person_option .chk{
+    margin-right: 22px;
+}
+.chk {
+	margin-right: 0px;
+}
+.person_select_row{
+    display: block !important;
+    margin-bottom: 10px;
+}
+.margin_top_bis{
+    margin-top: 20px;
+}
+.margin_top_bis_small{
+    margin-top: 20px;
+}
+#footer_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.package_card_item .package_detuils {
+	height: auto;
+}
+.package_card_item .chk {
+	position: unset;
+	width: 100%;
+}
+.footer_manu ul {
+    display: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+.footer_manu h4 {
+	font-size: 16px;
+	margin-bottom: 0px;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	border-top: 1px solid #fff;
+}
+.footer_qoute h3 {
+	font-family: var(--font-main);
+	font-weight: 700;
+	font-style: Italic;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: var(--white-color);
+	margin-bottom: 10px;
+	border-top: 1px solid #fff;
+	padding-top: 41px;
+}
+  .footer-toggle-icon {
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  /* Opened section */
+  .footer-open h4 .footer-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .footer-open ul {
+    display: block;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  .footer-toggle-icon {
+	display: block;
+}
+.sidebar_card_show {
+    position: fixed;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    background: #5d4334; /* brown area background */
+    border-radius: 20px 20px 0 0;
+    z-index: 9999;
+    transition: transform 0.35s ease;
+    transform: translateY(80%); /* hidden default */
+  }
+
+  /* When open */
+  .sidebar_card_show.active {
+    transform: translateY(0);
+  }
+
+  .sidebar_card_header {
+    padding: 14px 20px;
+    background: #5d4334;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sidebar_card_header h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+  }
+
+  .sidebar_toggle_icon {
+    font-size: 20px;
+    color: #fff;
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+
+  /* Icon rotate when opened */
+  .sidebar_card_show.active .sidebar_toggle_icon {
+    transform: rotate(0deg);
+  }
+
+  .selection_info {
+    background: #f7eadf;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  #footer_area {
+	padding: 39px 0 81px 0;
+}
+.sidebar_toggle_icon {
+	display: unset;
+}
+.footer_copyright .copy_text {
+	display: block !important;
+	text-align: start;
+}
+.footer_copyright .copy_text .dot_dot{
+	visibility: hidden;
+}
+.package_submit_button a {
+	font-size: 16px;
+	padding: 12px 15px;
+}
+}
+
+/* ========== min-width 576px to max-width 767.99px  */
+@media (min-width: 576px) and (max-width: 767.99px) { 
+.mobile_logo img {
+	height: 50px;
+}
+#header::before {
+	height: 1px;
+}
+#header .navbar .navbar-nav.left-nav {
+	padding-top: 20px;
+}
+.left-nav, .right-nav {
+	padding-top: 20px;
+}
+.footer_copyright .copy_text {
+	display: block !important;
+	text-align: start;
+}
+.footer_copyright .copy_text .dot_dot{
+	visibility: hidden;
+}
+#course_booking_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.course_booking_tab_button_last{
+    margin-top: 20px;
+}
+.person_selected_box {
+	margin-top: 20px;
+	height: auto !important;
+}
+.person_selected_box .person_option_checkbox {
+	height: auto !important;
+	margin-top: 20px;
+}
+.person_option {
+	height: auto;
+}
+.chk {
+	margin-right: 0px;
+}
+.margin_top_bis{
+    margin-top: 20px;
+}
+.margin_top_bis_small{
+    margin-top: 20px;
+}
+#footer_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.package_card_item .package_detuils {
+	background-color: var(--white-color);
+	border-radius: 0px 0px 15px 15px;
+	padding: 20px;
+	height: 480px;
+}
+.footer_manu ul {
+    display: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+.footer_manu h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	border-top: 1px solid #fff;
+}
+
+  .footer-toggle-icon {
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  /* Opened section */
+  .footer-open h4 .footer-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .footer-open ul {
+    display: block;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  .footer-toggle-icon {
+	display: block;
+}
+.sidebar_card_show {
+    position: fixed;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    background: #5d4334; /* brown area background */
+    border-radius: 20px 20px 0 0;
+    z-index: 9999;
+    transition: transform 0.35s ease;
+    transform: translateY(80%); /* hidden default */
+  }
+
+  /* When open */
+  .sidebar_card_show.active {
+    transform: translateY(0);
+  }
+
+  .sidebar_card_header {
+    padding: 14px 20px;
+    background: #5d4334;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sidebar_card_header h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+  }
+
+  .sidebar_toggle_icon {
+    font-size: 20px;
+    color: #fff;
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+
+  /* Icon rotate when opened */
+  .sidebar_card_show.active .sidebar_toggle_icon {
+    transform: rotate(0deg);
+  }
+
+  .selection_info {
+    background: #f7eadf;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  #footer_area {
+	padding: 39px 0 81px 0;
+}
+.sidebar_toggle_icon {
+	display: unset;
+}
+}
+
+/* ========== min-width 768px to max-width 991.99px  */
+@media (min-width: 768px) and (max-width: 991.99px) { 
+.mobile_logo img {
+	height: 50px;
+}
+#header::before {
+	height: 1px;
+}
+#header .navbar .navbar-nav.left-nav {
+	padding-top: 20px;
+}
+.left-nav, .right-nav {
+	padding-top: 20px;
+}
+#course_booking_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.course_booking_tab_button_last{
+    margin-top: 20px;
+}
+.person_selected_box {
+	margin-top: 20px;
+	height: auto !important;
+}
+.person_selected_box .person_option_checkbox {
+	height: auto !important;
+	margin-top: 20px;
+}
+.person_option {
+	height: auto;
+}
+.chk {
+	margin-right: 20px;
+}
+.margin_top_bis{
+    margin-top: 20px;
+}
+#footer_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+}
+
+/* ========== min-width 992px to max-width 1199.99px  */
+@media (min-width: 992px) and (max-width: 1199.99px) { 
+#course_booking_area .container {
+	padding-left: unset;
+	padding-right: unset;
+}
+.package_card_item .package_detuils ul li {
+	width: 90%;
+}
+.person_option {
+	padding: 10px;
+}
+}
+
+/* ========== min-width 992px to max-width 1399.99px  */
+@media (min-width: 1200px) and (max-width: 1399.99px) { 
+.package_card_item .package_detuils ul li {
+	width: 90%;
+}
+}
+
+/* ========== min-width 1400px and above ========== */
+@media (min-width: 1400px) {
+    
+}
