@@ -144,6 +144,8 @@ section#top_nav p span{
     z-index: 9999;
     transition: transform 0.35s ease;
     transform: translateY(80%); /* hidden default */
+    
+	box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.39);
   }
 
   /* When open */
@@ -240,6 +242,9 @@ section#top_nav p span{
 	margin: 0px 0;
 	margin-right: 0px;
 }
+.package_card_item {
+	height: auto;
+}
 
 }
 
@@ -310,7 +315,9 @@ section#top_nav p span{
 	background-color: var(--white-color);
 	border-radius: 0px 0px 15px 15px;
 	padding: 20px;
-	height: 480px;
+}
+.package_card_item {
+	height: auto;
 }
 .footer_manu ul {
     display: none;
@@ -473,6 +480,9 @@ section#top_nav p span{
 #footer_area .container {
 	padding-left: unset;
 	padding-right: unset;
+}
+.package-group {
+	margin-bottom: 20px;
 }
 
 }

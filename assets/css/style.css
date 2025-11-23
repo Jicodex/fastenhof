@@ -206,6 +206,7 @@ section#top_nav p a:hover{
 .course_booking_tab_button button.active{
     color: var(--primary-color);
     background-color: var(--secondary-color);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
 }
 
 /* Form Area Css Start  */
@@ -247,10 +248,11 @@ section#top_nav p a:hover{
 	outline: 0;
 	box-shadow: 0 0 0 0 rgba(13,110,253,.25);
 }
-.sidebar_card_show{
-    border-radius: 15px;
-    margin-top: 20px;
-    background-color: var(--secondary-opacity-color);
+.sidebar_card_show {
+	border-radius: 15px;
+	margin-top: 20px;
+	background-color: var(--secondary-opacity-color);
+	box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.39);
 }
 .sidebar_card_show .selection_info{
     padding: 20px;
@@ -511,7 +513,6 @@ section#top_nav p a:hover{
     background-color: var(--white-color);
     border-radius:0px 0px 15px 15px;
     padding: 20px;
-    height: 538px;
     position: relative;
 }
 .package_card_item .package_detuils p{
@@ -555,12 +556,14 @@ section#top_nav p a:hover{
 	padding: 21px 20px;
 	background-color: var(--card_header-color);
 	border-radius: 12px;
-	position: absolute;
-	width: auto;
+	/* position: absolute; */
+	width: 100%;
 	left: 20px !important;
 	bottom: 20px;
 	right: 20px;
-    transition: all .3s linear;
+	transition: all .3s linear;
+	text-align: start;
+	justify-content: start;
 }
 .package_card_item .chk .custom-checkbox {
 	flex-shrink: 0;
@@ -614,7 +617,7 @@ section#top_nav p a:hover{
     text-align: center;
     color: var(--dark-color);
     margin-top: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .package_card_item .package_detuils span{
     font-family: var(--font-main);
@@ -731,6 +734,30 @@ margin-left: 10px;
     background-color: #FFE7CE;
 }
 
+.package-group {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.package_card_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.package_detuils {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.package_detuils ul {
+  flex-grow: 1;
+}
+
+
 /* ======== Footer Area Css  */
 #footer_area{
     background-image: url(../img/footer_bg.webp);
@@ -821,14 +848,17 @@ display: flex;
     color: var(--white-color);
     margin-bottom: 0px;
 }
-.footer_copyright .dot_dot{
-    font-family: var(--font-main);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: var(--white-color);
-    margin-bottom: 0px;
+.footer_copyright .dot_dot {
+	font-family: var(--font-main);
+	font-weight: 500;
+	font-size: 23px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: var(--white-color);
+	/* margin-bottom: -74px; */
+	margin-top: -10px;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 .footer_copyright .copy_text a{
     font-family: var(--font-main);
@@ -987,6 +1017,7 @@ margin-top: 20px;
 }
 .unterkunft_active.active{
     background-color: #DAEC9E !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
 }
 .accomodation_check .chk {
 	display: inline-flex;
