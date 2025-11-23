@@ -1087,3 +1087,13 @@ margin-top: 20px;
 .room_page_btn a.btn_two_left:hover {
 	background-color: var(--green-color);
 }
+.faka_margin{
+    display: none;
+}
+.room_page_btn {
+	margin: 20px 0;
+	text-align: end;
+}
+.room_page_btn_two {
+	text-align: start;
+}

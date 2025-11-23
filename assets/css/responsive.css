@@ -234,6 +234,7 @@ section#top_nav p span{
 }
 .room_page_btn {
 	margin: 0;
+  text-align: center !important;
 }
 .room_page_btn a.btn_two_left {
 	margin: 0px 0;
@@ -250,7 +251,7 @@ section#top_nav p span{
 }
 .room_page_btn {
 	margin: 20px 0;
-	text-align: center;
+	text-align: center !important;
 }
     .custom_width{
    width: unset;
@@ -415,14 +416,20 @@ section#top_nav p span{
 .faka_margin{
   width: 20px;
   height: 20px;
+  display: inline;
 }
 }
 
 /* ========== min-width 768px to max-width 991.99px  */
 @media (min-width: 768px) and (max-width: 991.99px) { 
+.room_page_btn {
+	margin: 20px 0px;
+	text-align: center !important;
+}
   .faka_margin{
   width: 20px;
   height: 20px;
+  display: inline;
 }
     .custom_width{
    width: unset;
