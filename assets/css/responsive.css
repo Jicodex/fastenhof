@@ -1,5 +1,8 @@
 /* ========== min-width 300px to max-width 575.99px  */
 @media (min-width: 300px) and (max-width: 575.99px) { 
+    .custom_width{
+   width: unset;
+}
 section#top_nav p span{
 	display: none;
 }
@@ -199,10 +202,59 @@ section#top_nav p span{
 	font-size: 16px;
 	padding: 12px 15px;
 }
+
+.accommodation_img img {
+	margin-bottom: 20px;
+  border-radius: 12.5px;
+}
+.accomodation_check {
+	text-align: start;
+}
+.accomodation_check .chk p br{
+  display: none;
+}
+.accommodation_title{
+    display: inline-block;
+}
+.accommodation_title h4 {
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+.accommodation_title h3 {
+	margin-bottom: 10px;
+}
+.room_page_btn a.btn_two_left {
+	font-size: 16px;
+}
+.room_page_btn a {
+	font-size: 16px;
+    word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.room_page_btn {
+	margin: 0;
+}
+.room_page_btn a.btn_two_left {
+	margin: 0px 0;
+	margin-right: 0px;
+}
+
 }
 
 /* ========== min-width 576px to max-width 767.99px  */
 @media (min-width: 576px) and (max-width: 767.99px) { 
+  .room_page_btn a.btn_two_left {
+	margin: 0px 0;
+	margin-right: 0px;
+}
+.room_page_btn {
+	margin: 20px 0;
+	text-align: center;
+}
+    .custom_width{
+   width: unset;
+}
 .mobile_logo img {
 	height: 50px;
 }
@@ -353,10 +405,28 @@ section#top_nav p span{
 .sidebar_toggle_icon {
 	display: unset;
 }
+.accommodation_img img {
+	margin-bottom: 20px;
+  border-radius: 12.5px;
+}
+.accomodation_check {
+	text-align: start;
+}
+.faka_margin{
+  width: 20px;
+  height: 20px;
+}
 }
 
 /* ========== min-width 768px to max-width 991.99px  */
 @media (min-width: 768px) and (max-width: 991.99px) { 
+  .faka_margin{
+  width: 20px;
+  height: 20px;
+}
+    .custom_width{
+   width: unset;
+}
 .mobile_logo img {
 	height: 50px;
 }
@@ -397,6 +467,7 @@ section#top_nav p span{
 	padding-left: unset;
 	padding-right: unset;
 }
+
 }
 
 /* ========== min-width 992px to max-width 1199.99px  */
@@ -411,6 +482,9 @@ section#top_nav p span{
 .person_option {
 	padding: 10px;
 }
+
+
+
 }
 
 /* ========== min-width 992px to max-width 1399.99px  */

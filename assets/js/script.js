@@ -70,3 +70,23 @@ const footerSections = document.querySelectorAll(".footer_manu .col-12, .footer_
   sidebarHeader.addEventListener("click", () => {
     sidebar.classList.toggle("active");
   });
+
+
+  document.querySelectorAll('.show_hide_button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let parent = this.closest('.accommodation_short_des');
+        let content = parent.querySelector('.show_hide_div');
+        let icon = this.querySelector('.arrow_icon');
+
+        content.classList.toggle('active');
+        icon.classList.toggle('rotate');
+
+        if (content.classList.contains('active')) {
+            this.innerHTML = `weniger Zimmerdetails <img class="arrow_icon rotate" src="assets/img/icons/down_arrow_black.svg">`;
+        } else {
+            this.innerHTML = `mehr Zimmerdetails <img class="arrow_icon" src="assets/img/icons/down_arrow_black.svg">`;
+        }
+    });
+});
