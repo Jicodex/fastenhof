@@ -1,92 +1,158 @@
-// ===== Package select and active
-// সব package-group এর জন্য আলাদা আলাদা ভাবে কাজ করবে
+// ========================
+// 1. Package Select and Active
+// ========================
 document.querySelectorAll(".package-group").forEach(group => {
-
-  const radios = group.querySelectorAll('input[type="radio"]');
-
-  radios.forEach(radio => {
+  group.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener("change", function () {
-
-      // এই group এর ভিতরের সব item থেকে selected ক্লাস remove
-      group.querySelectorAll(".package_card_item").forEach(item => {
-        item.classList.remove("selected");
-      });
-
-      // শুধু current radio এর package select করো
+      group.querySelectorAll(".package_card_item").forEach(item => item.classList.remove("selected"));
       this.closest(".package_card_item").classList.add("selected");
     });
   });
-
 });
 
-// ======= Mobile Menu Start 
+// ========================
+// 2. Mobile Menu Toggle
+// ========================
 const toggler = document.querySelector(".menu-toggle");
-  const menu = document.getElementById("navbarSupportedContent");
+const menu = document.getElementById("navbarSupportedContent");
 
-  // Bootstrap collapse event listeners
-  menu.addEventListener("show.bs.collapse", () => {
-    toggler.classList.add("active"); // icon → X
-  });
+if (menu && toggler) {
+  menu.addEventListener("show.bs.collapse", () => toggler.classList.add("active"));
+  menu.addEventListener("hide.bs.collapse", () => toggler.classList.remove("active"));
 
-  menu.addEventListener("hide.bs.collapse", () => {
-    toggler.classList.remove("active"); // icon → normal
-  });
-
-  // Clicking any menu link will close the menu
   document.querySelectorAll("#navbarSupportedContent .nav-link").forEach(link => {
     link.addEventListener("click", () => {
       const bsCollapse = new bootstrap.Collapse(menu, { toggle: false });
-      bsCollapse.hide(); // menu close
+      bsCollapse.hide();
     });
   });
-// ======= Mobile Menu End 
+}
 
+// ========================
+// 3. Footer Accordion
+// ========================
 const footerSections = document.querySelectorAll(".footer_manu .col-12, .footer_manu .col-md-4, .footer_manu .col-lg-2");
 
-  footerSections.forEach(section => {
-    const title = section.querySelector("h4");
-    const list = section.querySelector("ul");
+footerSections.forEach(section => {
+  const title = section.querySelector("h4");
+  const list = section.querySelector("ul");
+  if (title && list) {
+    title.addEventListener("click", e => {
+      e.stopPropagation(); // Prevent conflict with outside clicks
+      footerSections.forEach(s => { if (s !== section) s.classList.remove("footer-open"); });
+      section.classList.toggle("footer-open");
+    });
+  }
+});
 
-    if(title && list){
-      title.addEventListener("click", () => {
+// ========================
+// 4. Sidebar Toggle
+// ========================
+const sidebar = document.querySelector(".sidebar_card_show");
+const sidebarHeader = document.querySelector(".sidebar_card_header");
 
-        // Close all sections first
-        footerSections.forEach(s => {
-          if(s !== section){
-            s.classList.remove("footer-open");
-          }
-        });
-
-        // Toggle current section
-        section.classList.toggle("footer-open");
-      });
-    }
-  });
-
-
- const sidebar = document.querySelector(".sidebar_card_show");
-  const sidebarHeader = document.querySelector(".sidebar_card_header");
-
-  sidebarHeader.addEventListener("click", () => {
+if (sidebar && sidebarHeader) {
+  sidebarHeader.addEventListener("click", e => {
+    e.stopPropagation(); // Prevent conflict
     sidebar.classList.toggle("active");
   });
+}
 
+// ========================
+// 5. Show / Hide Room Details
+// ========================
+document.querySelectorAll('.show_hide_button').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    const parent = this.closest('.accommodation_short_des');
+    const content = parent.querySelector('.show_hide_div');
+    const icon = this.querySelector('.arrow_icon');
 
-  document.querySelectorAll('.show_hide_button').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.preventDefault();
+    content.classList.toggle('active');
+    icon.classList.toggle('rotate');
 
-        let parent = this.closest('.accommodation_short_des');
-        let content = parent.querySelector('.show_hide_div');
-        let icon = this.querySelector('.arrow_icon');
+    this.innerHTML = content.classList.contains('active') 
+      ? `weniger Zimmerdetails <img class="arrow_icon rotate" src="assets/img/icons/down_arrow_black.svg">`
+      : `mehr Zimmerdetails <img class="arrow_icon" src="assets/img/icons/down_arrow_black.svg">`;
+  });
+});
 
-        content.classList.toggle('active');
-        icon.classList.toggle('rotate');
+// ========================
+// 6. Plus / Minus Input
+// ========================
+document.querySelectorAll('.plus_minus_mode').forEach(box => {
+  const input = box.querySelector("input");
+  if (!input) return;
 
-        if (content.classList.contains('active')) {
-            this.innerHTML = `weniger Zimmerdetails <img class="arrow_icon rotate" src="assets/img/icons/down_arrow_black.svg">`;
-        } else {
-            this.innerHTML = `mehr Zimmerdetails <img class="arrow_icon" src="assets/img/icons/down_arrow_black.svg">`;
-        }
+  box.querySelector(".plus")?.addEventListener("click", e => { e.preventDefault(); input.value = Number(input.value) + 1; });
+  box.querySelector(".minus")?.addEventListener("click", e => { e.preventDefault(); if(input.value > 0) input.value = Number(input.value) - 1; });
+});
+
+// ========================
+// 7. Sticky Top Nav
+// ========================
+window.addEventListener('scroll', () => {
+  const topNav = document.getElementById('top_nav');
+  const header = document.getElementById('header');
+  const scroll = window.scrollY;
+
+  if(topNav && header){
+    if(scroll > 50){
+      topNav.classList.add('sticky');
+      header.classList.add('sticky');
+    } else {
+      topNav.classList.remove('sticky');
+      header.classList.remove('sticky');
+    }
+  }
+});
+
+// ========================
+// 8. Dropdowns and Date Picker
+// ========================
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(".dropdown-menu");
+  const selectBoxes = document.querySelectorAll(".select-box");
+
+  const closeAllDropdowns = () => dropdowns.forEach(dd => dd.style.display = "none");
+
+  // Open dropdown on select-box click
+  selectBoxes.forEach((box, index) => {
+    box.addEventListener("click", e => {
+      e.stopPropagation();
+      closeAllDropdowns();
+
+      const menu = document.getElementById(box.dataset.dd);
+      if(menu){
+        menu.style.left = "10px";
+        menu.style.top = "100%";
+        menu.style.display = "block";
+      }
     });
+  });
+
+  // Dropdown option click
+  document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", e => {
+      e.stopPropagation();
+      const parent = option.closest(".dropdown-menu");
+      if(!parent) return;
+
+      const index = parent.id === "dd1" ? 0 : 1;
+      selectBoxes[index].querySelector("span").textContent = option.textContent;
+      parent.style.display = "none";
+    });
+  });
+
+  // Calendar picker
+  document.querySelectorAll(".date-box").forEach(box => {
+    const input = box.querySelector(".date-input");
+    if(!input) return;
+
+    box.addEventListener("click", e => { e.stopPropagation(); input.showPicker(); });
+    input.addEventListener("change", e => box.querySelector("span").textContent = e.target.value);
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener("click", () => closeAllDropdowns());
 });

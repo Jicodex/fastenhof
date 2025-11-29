@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step-3 Page</title>
+    <!-- ========== All Css Link  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Reesponsive Css  -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- ========== Page Top Nav Start ==========  -->
+    <section id="top_nav" class="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>
+              <span>Wir sind gerne für Dich da! ·</span>
+              <a href="tel:+4903392370240">+49 (0) 33923 70240</a> ·
+              <a href="mailto:service@fastenhof.de">service@fastenhof.de</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Page Top Nav End ==========  -->
+
+    <!-- ========== Header Navbar Area Start ==========  -->
+    <div id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg justify-content-between">
+          <!-- Mobile LEFT Logo -->
+          <a class="navbar-brand d-block d-lg-none mobile_logo" href="#">
+            <img src="assets/img/mobile_logo.png" alt="logo" />
+          </a>
+
+          <!-- Mobile RIGHT Toggle -->
+          <button
+            class="navbar-toggler menu-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <svg
+              class="menu-icon"
+              width="39"
+              height="30"
+              viewBox="0 0 39 30"
+              fill="none"
+            >
+              <rect
+                class="line line1"
+                width="39"
+                height="4"
+                rx="2"
+                fill="#755647"
+              />
+              <rect
+                class="line line2"
+                y="13"
+                width="39"
+                height="4"
+                rx="2"
+                fill="#755647"
+              />
+              <rect
+                class="line line3"
+                x="16"
+                y="26"
+                width="23"
+                height="4"
+                rx="2"
+                fill="#755647"
+              />
+            </svg>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- LEFT MENU -->
+            <ul class="navbar-nav left-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Fastenkurse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Begleitangebote</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bildungsurlaub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Buchung</a>
+              </li>
+            </ul>
+
+            <!-- CENTER LOGO -->
+            <a
+              class="navbar-brand center-logo d-none d-lg-block dasktop_logo"
+              href="#"
+            >
+              <img src="assets/img/logo.png" alt="logo" />
+            </a>
+
+            <!-- RIGHT MENU -->
+            <ul class="navbar-nav right-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hof & Unterkünfte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Wissenswertes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Über uns</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ========== Header Navbar Area End ==========  -->
+
+    <!-- ========== Banner Area Start ==========  -->
+    <section id="banner_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="banner_bg">
+              <img src="assets/img/banner.png" alt="banner_img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Banner Area End ==========  -->
+
+    <!-- ========== Course booking Area Start ==========  -->
+    <section id="course_booking_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="course_area_title">
+              <h3>Kursbuchung – <span>Behmfasten</span></h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== Step activite -->
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="row custom_width">
+              <!-- ====== 1st button / 1. Kurswahl  -->
+              <div class="col-lg-2 col-6">
+                <div class="course_booking_tab_button">
+                  <button>
+                    <p>1. <br />Kurswahl</p>
+                  </button>
+                </div>
+              </div>
+              <!-- ====== 2nd button / 2. Unterkunft  -->
+              <div class="col-lg-2 col-6">
+                <div class="course_booking_tab_button">
+                  <button class="unterkunft_active">
+                    <p>2. <br />Unterkunft</p>
+                  </button>
+                </div>
+              </div>
+              <!-- ====== 3rd button / 3. Begleitangebote  -->
+              <div class="col-lg-2 col-6">
+                <div
+                  class="course_booking_tab_button course_booking_tab_button_last"
+                >
+                  <button class="three_tab active">
+                    <p>3. <br />Begleitangebote</p>
+                  </button>
+                </div>
+              </div>
+              <!-- ====== 4th button / 4. Übersicht & Buchung  -->
+              <div class="col-lg-2 col-6">
+                <div
+                  class="course_booking_tab_button course_booking_tab_button_last"
+                >
+                  <button>
+                    <p>4. <br />Übersicht & Buchung</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ========== Accommodation Area  -->
+        <div class="row">
+          <div class="col-lg-10">
+            <form action="#" method="post" class="begle_form">
+              <div class="begle_area">
+                <div class="part_one_card step3">
+                  <div class="row custom_width">
+                    <div class="col-lg-8">
+                      <div class="accommodation_title">
+                        <h3>Unterkunft</h3>
+                        <h4>Wähle Deine Unterkunft</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>
+                          Durch Yoga-Übungen wird die Beweglichkeit des Körpers
+                          gefördert und der Stoffwechsel angeregt. Yoga wirkt
+                          auch dem Muskelabbauprozess entgegen. Durch das
+                          Zusammenspiel von Yoga und Fasten wird die Entgiftung
+                          des Körpers unterstützt und der Körper kann sich
+                          regenerieren. Über Atem und Meditation gelangen wir zu
+                          Entspannung und Konzentration und bauen Stress ab.
+                          Körperliche Beschwerden werden verringert. Der Geist
+                          kommt zur Ruhe und Klarheit. Wir fühlen uns lebendiger
+                          und zufriedener. So kann durch Yoga und Fasten ein
+                          Prozess der Veränderung in die positive Richtung
+                          beginnen.
+                        </p>
+                        <p class="note_p">
+                          Bitte beachte, dass bei der Teilnahme als
+                          Bildungsurlaub die Buchung des Abendkurses
+                          erforderlich ist.
+                        </p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <ul>
+                          <li>
+                            1 x Massagebürste von Jentschurafür
+                            Trockenbürstungen
+                          </li>
+                          <li>1 x Öko-Wärmflasche</li>
+                          <li>1 x Klysopumpe/Irrigator</li>
+                          <li>4 x Basenfußbad von Jentschura</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <div class="row custom_width">
+                    <div class="col-lg-4 room_page_btn step_form_last_button">
+                      <a href="#" class="btn_two_left"
+                        ><img
+                          src="assets/img/icons/left_arrow.svg"
+                          alt="arrow"
+                        />
+                        zurück zur Kurswahl
+                      </a>
+                    </div>
+                    <div class="faka_margin"></div>
+                    <div
+                      class="col-lg-6 room_page_btn room_page_btn_two step_form_last_button_two"
+                    >
+                      <a href="#"
+                        >Auswählen und zu den Zusatzangeboten
+                        <img src="assets/img/icons/right_arrow.svg" alt="arrow"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ====== Step Three / part Two for person and person one  -->
+                <div class="person_one_and_two">
+                  <div class="row custom_width">
+                    <div class="col-lg-8">
+                      <div class="accommodation_title">
+                        <h3>Begleitangebote</h3>
+                        <h4>
+                          Wählt Eure optionalen Begleitangebote zu Eurem
+                          Fastenkurs.
+                        </h4>
+                      </div>
+
+                      <h4 class="top_git">Auswahl Person 1</h4>
+                    </div>
+                  </div>
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <ul>
+                          <li>
+                            1 x Massagebürste von Jentschurafür
+                            Trockenbürstungen
+                          </li>
+                          <li>1 x Öko-Wärmflasche</li>
+                          <li>1 x Klysopumpe/Irrigator</li>
+                          <li>4 x Basenfußbad von Jentschura</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <div class="row custom_width">
+                    <div class="col-lg-4 room_page_btn step_form_last_button">
+                      <a href="#" class="btn_two_left"
+                        ><img
+                          src="assets/img/icons/left_arrow.svg"
+                          alt="arrow"
+                        />
+                        zurück zur Kurswahl
+                      </a>
+                    </div>
+                    <div class="faka_margin"></div>
+                    <div
+                      class="col-lg-6 room_page_btn room_page_btn_two step_form_last_button_two"
+                    >
+                      <a href="#"
+                        >Auswählen und zu den Zusatzangeboten
+                        <img src="assets/img/icons/right_arrow.svg" alt="arrow"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="person_one_and_two person_one_and_two_two">
+                  <div class="row custom_width">
+                    <div class="col-lg-8">
+                      <div class="accommodation_title">
+                        <h4 class="top_git ms-0">Auswahl Person 2</h4>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <p>Durch Yoga-Übungen wird die Beweglichkeit</p>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <!-- ====items start -->
+                  <div class="begle_items">
+                    <div class="row custom_width">
+                      <div class="col-lg-7">
+                        <h3>Abendkurs Yoga, 5 x 90 min</h3>
+                        <ul>
+                          <li>
+                            1 x Massagebürste von Jentschurafür
+                            Trockenbürstungen
+                          </li>
+                          <li>1 x Öko-Wärmflasche</li>
+                          <li>1 x Klysopumpe/Irrigator</li>
+                          <li>4 x Basenfußbad von Jentschura</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex plus_min_con justify-content-center">
+                          <!-- Plus Minus Input -->
+                          <div class="qty_box plus_minus_mode">
+                            <button class="minus">−</button>
+                            <input type="number" value="2" />
+                            <button class="plus">+</button>
+                          </div>
+                          <p class="prize_p">X 110,- Euro</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ====items  end -->
+
+                  <div class="row custom_width">
+                    <div class="col-lg-4 room_page_btn step_form_last_button">
+                      <a href="#" class="btn_two_left"
+                        ><img
+                          src="assets/img/icons/left_arrow.svg"
+                          alt="arrow"
+                        />
+                        zurück zur Kurswahl
+                      </a>
+                    </div>
+                    <div class="faka_margin"></div>
+                    <div
+                      class="col-lg-6 room_page_btn room_page_btn_two step_form_last_button_two"
+                    >
+                      <a href="#"
+                        >Auswählen und zu den Zusatzangeboten
+                        <img src="assets/img/icons/right_arrow.svg" alt="arrow"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- sidebar message Course selection  -->
+          <div class="col-lg-2">
+            <div class="sidebar_card_show step_three_sidebar">
+              <div class="alada_card">
+                <div class="sidebar_card_header">
+                <h3>Deine bisherige Auswahl</h3>
+                <svg
+                  class="sidebar_toggle_icon"
+                  width="18"
+                  height="10"
+                  viewBox="0 0 18 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.82353 2.35294L16.4706 10L17.6471 8.82353L8.82353 0L0 8.82353L1.17647 10L8.82353 2.35294Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="selection_info">
+                <h5>Kurswahl</h5>
+                <p>17.-23. Januar 2026, Behmfasten mit Susanne Behm</p>
+                <p>Person 1</p>
+                <ul>
+                  <li>Paket STANDARD</li>
+                  <li>P925,- Euro</li>
+                </ul>
+                <p>Person 2</p>
+                <ul>
+                  <li>Paket STANDARD</li>
+                  <li>P925,- Euro</li>
+                </ul>
+                <h4 class="total_prize">1.850,- Euro</h4>
+              </div>
+              </div>
+              <div class="alada_card mobile_alada_card">
+                <div class="sidebar_card_header mobile_side_bar_header">
+                <h3>Deine bisherige Auswahl</h3>
+                <svg
+                  class="sidebar_toggle_icon"
+                  width="18"
+                  height="10"
+                  viewBox="0 0 18 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.82353 2.35294L16.4706 10L17.6471 8.82353L8.82353 0L0 8.82353L1.17647 10L8.82353 2.35294Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="selection_info">
+                <h5>Kurswahl</h5>
+                <p>17.-23. Januar 2026, Behmfasten mit Susanne Behm</p>
+                <p>Person 1</p>
+                <ul>
+                  <li>Paket STANDARD</li>
+                  <li>P925,- Euro</li>
+                </ul>
+                <p>Person 2</p>
+                <ul>
+                  <li>Paket STANDARD</li>
+                  <li>P925,- Euro</li>
+                </ul>
+                <h4 class="total_prize">1.850,- Euro</h4>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Course booking Area End ==========  -->
+
+    <!-- ========== Footer Area Start ==========  -->
+    <footer id="footer_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer_logo text-center">
+              <a href="#">
+                <img src="assets/img/light_logo.png" alt="Logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_manu">
+          <div class="row">
+            <div class="col-lg-2 col-md-4 col-12">
+              <h4>Über uns <span class="footer-toggle-icon">+</span></h4>
+              <ul>
+                <li><a href="#">Der Fastenhof</a></li>
+                <li><a href="#">Susanne Behm</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Erfahrungsberichte</a></li>
+                <li><a href="#">Bildergalerie</a></li>
+                <li><a href="#">Buchempfehlungen</a></li>
+                <li><a href="#">Lage und Anfahrt</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12">
+              <h4>Fastenkurse <span class="footer-toggle-icon">+</span></h4>
+              <ul>
+                <li><a href="#">Behmfasten</a></li>
+                <li><a href="#">Buchingerfasten</a></li>
+                <li><a href="#">Basenfasten</a></li>
+                <li><a href="#">Hildegardfasten</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12">
+              <h4>Bildungsurlaub <span class="footer-toggle-icon">+</span></h4>
+              <ul>
+                <li><a href="#">Fasten für Fastenleiter (FafFl)</a></li>
+                <li><a href="#">Fastenkurs-Termine</a></li>
+                <li><a href="#">Unterkunft</a></li>
+                <li><a href="#">Preisliste unserer Zusatzleistungen</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12">
+              <h4>Wissenswertes <span class="footer-toggle-icon">+</span></h4>
+              <ul>
+                <li><a href="#">Warum fasten?</a></li>
+                <li><a href="#">Behm-Methode</a></li>
+                <li><a href="#">Grüne Smoothies</a></li>
+                <li><a href="#">Shinrin-Yoku (Waldbaden)</a></li>
+                <li><a href="#">CQM Coaching</a></li>
+                <li>
+                  <a href="#">Yoga, Feldenkrais, Qigong & Achtsame Bewegung</a>
+                </li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="footer_qoute">
+                <h3>
+                  “Die Kraft und Energie der Natur und die positive Atmosphäre
+                  machen den Fastenhof zu einem idealen Ort für Ihr
+                  Fasten-Erlebnis.”
+                </h3>
+                <p>Susanne Behm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_copyright">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="copy_text">
+                <span>©Fastenhof Behm 2025 </span>
+                <div class="dot_dot">.</div>
+                <a href="#">Impressum</a>
+                <div class="dot_dot">.</div>
+                <a href="#">Kontakt</a>
+                <div class="dot_dot">.</div>
+                <a href="#">Datenschutzerklärung</a>
+                <div class="dot_dot">.</div>
+                <a href="#">Allgemeine Geschäftsbedingungen</a>
+                <div class="dot_dot">.</div>
+                <a href="#">Widerrufsbelehrung</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== Footer Area End ==========  -->
+    <!-- ========== All JS Link  -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

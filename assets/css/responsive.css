@@ -3,6 +3,9 @@
     .custom_width{
    width: unset;
 }
+.sticky {
+	top: 0;
+}
 section#top_nav p span{
 	display: none;
 }
@@ -135,22 +138,27 @@ section#top_nav p span{
 	display: block;
 }
 .sidebar_card_show {
-    position: fixed;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    background: #5d4334; /* brown area background */
-    border-radius: 20px 20px 0 0;
-    z-index: 9999;
-    transition: transform 0.35s ease;
-    transform: translateY(80%); /* hidden default */
-    
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background: #5d4334;
+	border-radius: 20px 20px 0 0;
+	z-index: 9999;
+	transition: transform 0.35s ease;
 	box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.39);
-  }
+	top: 88%;
+}
+  .alada_card {
+	border-radius: 15px;
+	margin-top: 0px;
+	/* background-color: var(--secondary-opacity-color); */
+	/* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.39); */
+}
 
   /* When open */
   .sidebar_card_show.active {
-    transform: translateY(0);
+    top: unset;
+    bottom: 0;
   }
 
   .sidebar_card_header {
@@ -245,6 +253,113 @@ section#top_nav p span{
 .package_card_item {
 	height: auto;
 }
+.part_one_card .col-lg-7 {
+	border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.begle_items .col-lg-7 {
+	border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.plus_min_con {
+  justify-content: start !important;
+}
+.mobile_side_bar_header{
+  display: none;
+}
+.alada_card {
+	border-radius: 15px;
+	margin-top: 0px;
+	background-color: var(--secondary-opacity-color);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.39);
+}
+.mobile_alada_card .selection_info {
+	background-color: #FFE5CF !important;
+}
+
+
+
+.uber_item_two {
+	gap: 0px;
+	margin-bottom: 20px;
+	display: grid !important;
+	border-bottom: 1px solid #D8AC86;
+}
+.my_ul_flex{
+	display: grid !important;
+	gap: 0px !important;
+}
+.my_ul_flex_main{
+	display: grid !important;
+	gap: 20px !important;
+	margin-bottom: 20px;
+}
+ .my_ul_flex_main span {
+	text-align: end;
+}
+.uber_item_three ul li p {
+	width: 100%;
+}
+.buchug_form_start .col-lg-6{
+	margin-bottom: 20px;
+}
+.buchug_form_start .mt-4{
+	margin-top: 0px !important;
+}
+.buchug_form_start textarea {
+	margin-bottom: 20px;
+}
+.border_top_two{
+	    width: 100%;
+    height: 1px;
+    background-color: #D8AC86;
+    margin: 40px 0;
+	margin-top: 20px;
+}
+
+
+
+
+.filters {
+	display: grid;
+	justify-content: normal;
+	gap: 10px;
+	padding: 0px 20px 20px 20px;
+}
+
+.thank_you_card h3 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.thank_you_card p {
+	font-size: 14px;
+	width: 100%;
+}
+.thank_you_card {
+	padding: 20px;
+	margin-bottom: 40px;
+}
+.thanks_table {
+	padding: 20px;
+}
+.thanks_table ul li {
+	display: grid;
+	justify-content: start;
+	margin-bottom: 20px;
+}
+.thanks_ful {
+	display: none;
+}
+.thanks_bttn{
+	display: grid !important;
+}
+
+
 
 }
 
@@ -357,20 +472,24 @@ section#top_nav p span{
 	display: block;
 }
 .sidebar_card_show {
-    position: fixed;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    background: #5d4334; /* brown area background */
-    border-radius: 20px 20px 0 0;
-    z-index: 9999;
-    transition: transform 0.35s ease;
-    transform: translateY(80%); /* hidden default */
-  }
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background: #5d4334;
+	border-radius: 20px 20px 0 0;
+	z-index: 9999;
+	transition: transform 0.35s ease;
+	box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.39);
+	top: 88%;
+}
+  .alada_card {
+	margin-top: 0px;
+}
 
   /* When open */
   .sidebar_card_show.active {
-    transform: translateY(0);
+    top: unset;
+    bottom: 0px;
   }
 
   .sidebar_card_header {
@@ -425,10 +544,121 @@ section#top_nav p span{
   height: 20px;
   display: inline;
 }
+.room_page_btn {
+	border-bottom: none !important;
+}
+.part_one_card .col-lg-7 {
+	border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.begle_items .col-lg-7{
+    border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.plus_min_con {
+  justify-content: start !important;
+}
+.mobile_side_bar_header{
+  display: none;
+}
+.alada_card {
+	border-radius: 15px;
+	margin-top: 0px;
+	background-color: var(--secondary-opacity-color);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.39);
+}
+.mobile_alada_card .selection_info {
+	background-color: #FFE5CF !important;
+}
+
+
+
+.uber_item_two {
+	gap: 0px;
+	margin-bottom: 20px;
+	display: grid !important;
+	border-bottom: 1px solid #D8AC86;
+}
+.my_ul_flex{
+	display: grid !important;
+	gap: 0px !important;
+}
+.my_ul_flex_main{
+	display: grid !important;
+	gap: 20px !important;
+	margin-bottom: 20px;
+}
+ .my_ul_flex_main span {
+	text-align: end;
+}
+.uber_item_three ul li p {
+	width: 100%;
+}
+.buchug_form_start .col-lg-6{
+	margin-bottom: 20px;
+}
+.buchug_form_start .mt-4{
+	margin-top: 0px !important;
+}
+.buchug_form_start textarea {
+	margin-bottom: 20px;
+}
+.border_top_two{
+	    width: 100%;
+    height: 1px;
+    background-color: #D8AC86;
+    margin: 40px 0;
+	margin-top: 20px;
+}
+
+
+
+.filters {
+	display: grid;
+	justify-content: normal;
+	gap: 10px;
+	padding: 0px 20px 20px 20px;
+}
+
+.thank_you_card h3 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.thank_you_card p {
+	font-size: 14px;
+	width: 100%;
+}
+.thank_you_card {
+	padding: 20px;
+	margin-bottom: 40px;
+}
+.thanks_table {
+	padding: 20px;
+}
+.thanks_table ul li {
+	display: grid;
+	justify-content: start;
+	margin-bottom: 20px;
+}
+.thanks_ful {
+	display: none;
+}
+.thanks_bttn{
+	display: grid !important;
+}
+
+
 }
 
 /* ========== min-width 768px to max-width 991.99px  */
 @media (min-width: 768px) and (max-width: 991.99px) { 
+	.thanks_table ul li p {
+	width: 40%;
+}
 .room_page_btn {
 	margin: 20px 0px;
 	text-align: center !important;
@@ -482,6 +712,31 @@ section#top_nav p span{
 	padding-right: unset;
 }
 .package-group {
+	margin-bottom: 20px;
+}
+.part_one_card .col-lg-7 {
+	border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.begle_items .col-lg-7{
+    border-right: 0px solid #E3D06C;
+	border-bottom: 1px solid #E3D06C;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.plus_min_con {
+  justify-content: start !important;
+}
+
+.buchug_form_start .col-lg-6{
+	margin-bottom: 20px;
+}
+.buchug_form_start .mt-4{
+	margin-top: 0px !important;
+}
+.buchug_form_start textarea {
 	margin-bottom: 20px;
 }
 
