@@ -135,6 +135,8 @@ section#top_nav p a:hover{
   .right-nav {
     flex: unset;                /* Normal mobile behavior */
   }
+
+
 }
 
 /* Sticky state */
@@ -508,6 +510,7 @@ font-weight: 600;
 	background-color: var(--secondary-opacity-color);
 	box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.39);
 }
+
 .sidebar_card_show .selection_info{
     padding: 20px;
 }
@@ -516,6 +519,7 @@ font-weight: 600;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     padding: 20px;
+    /* height: 5vh; */
 }
 .sidebar_card_show .sidebar_card_header h3{
     font-family: var(--font-main);
@@ -1774,6 +1778,7 @@ input:focus-visible {
   background: #FFFFFF;
   position: relative;
   transition: 0.2s ease;
+  z-index: 9999 !important;
 }
 
 /* Checked style */
@@ -1802,6 +1807,21 @@ letter-spacing: 0%;
 color: var(--dark-color);
 }
 .buchug_form p span{
+    margin-bottom: 0px;
+font-family: var(--font-main);
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+line-height: 140%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-offset: 0%;
+text-decoration-thickness: 0%;
+text-decoration-skip-ink: auto;
+color: var(--green-color);
+}
+.buchug_form p a{
     margin-bottom: 0px;
 font-family: var(--font-main);
 font-weight: 700;

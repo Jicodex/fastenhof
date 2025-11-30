@@ -13,7 +13,7 @@ section#top_nav p span{
 	height: 37px;
 }
 #header::before {
-	height: 77px;
+	height: 100%;
 }
 #header .navbar .navbar-nav.left-nav {
 	padding-top: 20px;
@@ -146,13 +146,22 @@ section#top_nav p span{
 	z-index: 9999;
 	transition: transform 0.35s ease;
 	box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.39);
-	top: 88%;
+	bottom: 0px;
 }
   .alada_card {
 	border-radius: 15px;
 	margin-top: 0px;
 	/* background-color: var(--secondary-opacity-color); */
 	/* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.39); */
+}
+
+.sidebar_card_show .selection_info {
+	display: none;
+}
+
+.sidebar_card_show.active .selection_info {
+	display: inline-block;
+	width: 100%;
 }
 
   /* When open */
@@ -192,8 +201,6 @@ section#top_nav p span{
   .selection_info {
     background: #f7eadf;
     padding: 20px;
-    max-height: 60vh;
-    overflow-y: auto;
   }
   #footer_area {
 	padding: 39px 0 81px 0;
@@ -480,7 +487,7 @@ section#top_nav p span{
 	z-index: 9999;
 	transition: transform 0.35s ease;
 	box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.39);
-	top: 88%;
+	bottom: 0;
 }
   .alada_card {
 	margin-top: 0px;
@@ -490,6 +497,13 @@ section#top_nav p span{
   .sidebar_card_show.active {
     top: unset;
     bottom: 0px;
+  }
+  .selection_info{
+	display: none;
+  }
+  .sidebar_card_show.active .selection_info{
+    display: inline-block;
+	width: 100%;
   }
 
   .sidebar_card_header {
@@ -523,8 +537,6 @@ section#top_nav p span{
   .selection_info {
     background: #f7eadf;
     padding: 20px;
-    max-height: 60vh;
-    overflow-y: auto;
   }
   #footer_area {
 	padding: 39px 0 81px 0;
