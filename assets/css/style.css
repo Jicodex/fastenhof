@@ -1748,6 +1748,9 @@ margin-bottom: 0;
 input:focus-visible {
     outline: none;
 }
+textarea:focus-visible {
+    outline: none;
+}
 .part_one_card .custom-checkbox {
 	display: flex;
 	align-items: center;
