@@ -111,6 +111,9 @@ section#top_nav p a:hover{
     color: var(--green-color);
     border-bottom: 2px solid var(--green-color);
 }
+#header .navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--green-color);
+}
 #header .navbar .navbar-nav.left-nav{
     justify-content: end !important;
 }
@@ -147,8 +150,234 @@ section#top_nav p a:hover{
 .top.top{
     top: 0 !important; 
 }
-.sticky .navbar {
-  padding: 7px 0 !important; /* reduce padding when sticky */
+
+
+/* ============================
+   DESKTOP MEGA MENU
+============================ */
+
+.mega_card{
+    background-image: url(../img/mega_menu_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 70px;
+    position: relative;
+    z-index: 11;
+}
+.mega_flower{
+    position: absolute;
+    top: -40%;
+    right: -40%;
+    z-index: 1;
+    
+}
+.mega_card h3{
+    font-family: var(--font-main);
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: var(--primary-color);
+}
+.mega_card p{
+    font-family: var(--font-main);
+font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: var(--primary-color);
+margin-bottom: 20px;
+}
+.mega_card a{
+    font-family: var(--font-main);
+font-weight: 700;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+color: var(--white-color);
+background-color: var(--primary-color);
+padding: 10px;
+border-radius: 15px;
+text-decoration: none;
+transition: all .3s linear;
+}
+.mega_card a:hover{
+background-color: var(--green-color);
+}
+@media (min-width: 992px) {
+
+
+.mega-dropdown:hover .mega-menu {
+	opacity: 1;
+	visibility: visible;
+	top: 80px;
+    left: 0;
+}
+.mega-menu {
+	position: fixed;
+	top: 80px;
+	left: -100%;
+	min-width: 100%;
+	background: transparent;
+	border-radius: 8px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s ease;
+	width: 100%;
+	padding-top: 26px;
+}
+
+.mega-menu .mega-row {
+	display: flex;
+	gap: 30px;
+	padding-top: 20px;
+	background-color: #FFF7F0;
+	padding-bottom: 20px;
+}
+
+
+  /* Hide arrow on desktop */
+  .mega-arrow {
+    display: none !important;
+  }
+  .mega-row ul{
+    padding-left: 0px;
+    list-style-type: none;
+  }
+  .mega-row ul li{
+    margin-bottom: 5px;
+  }
+  .mega-row ul li a{
+font-family: var(--font-main);
+font-weight: 500;
+font-size: 14px;
+line-height: 120%;
+letter-spacing: 0%;
+color: var(--primary-color);
+text-decoration: none;
+transition: all .3s linear;
+  }
+  .mega-row ul li a:hover{
+color: var(--green-color);
+font-weight: 600;
+  }
+}
+/* ============================
+   MOBILE MEGA MENU + ANIMATION
+============================ */
+@media (max-width: 991px) {
+/* Navbar Collapse scrollable but hide scrollbar */
+.navbar-collapse {
+	max-height: 80vh;          /* পুরো স্ক্রিন ঢেকে ফেলবে না */
+    overflow-y: auto !important;
+	margin-left: -12px;
+	margin-right: -12px;
+	padding-left: 15px;
+	padding-right: 15px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+
+
+  .mega-menu {
+    max-height: 60vh;          /* Mega menu বড় হলে স্ক্রল হবে */
+    overflow-y: auto;
+  }
+  .mega_flower {
+	position: absolute;
+	top: -26%;
+	right: 0px;
+	z-index: 1;
+	width: 80px;
+}
+  /* Mega dropdown container */
+  .mega-dropdown {
+    width: 100%;
+  }
+
+  /* Mega menu animation setup */
+  .mega-menu {
+    display: block;              /* to allow animation */
+    max-height: 0;               /* collapsed height */
+    overflow: hidden;            /* hide content */
+    background: #f9f7f6;
+    padding: 0 20px;
+
+    opacity: 0;
+    transition: 
+      max-height 0.35s ease,
+      opacity 0.35s ease,
+      padding 0.35s ease;
+  }
+
+  /* When open */
+.mega-dropdown.open .mega-menu {
+	max-height: 100%;
+	opacity: 1;
+	padding: 6px 0px;
+	width: 109%;
+	margin-left: -12px;
+	margin-right: -12px;
+	padding-left: 12px;
+    background-color: #FFF7F0;
+}
+.mega-row .col-lg-4{
+    padding-left: 0;
+}
+
+   .mega-row ul{
+    padding-left: 0px;
+    list-style-type: none;
+  }
+  .mega-row ul li{
+    margin-bottom: 5px;
+  }
+  .mega-row ul li a{
+font-family: var(--font-main);
+font-weight: 500;
+font-size: 14px;
+line-height: 120%;
+letter-spacing: 0%;
+color: var(--primary-color);
+text-decoration: none;
+transition: all .3s linear;
+  }
+  .mega-row ul li a:hover{
+color: var(--green-color);
+font-weight: 600;
+  }
+  /* ============================
+      MOBILE ARROW ICON
+  ============================ */
+  .mega-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    border-right: 2px solid #755647;
+    border-bottom: 2px solid #755647;
+    transform: rotate(45deg);
+    transition: 0.3s ease;
+  }
+
+  /* Arrow rotate when open */
+  .mega-dropdown.open .mega-arrow {
+    transform: rotate(-135deg);
+  }
+
+  /* flex alignment */
+  .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mega_card {
+	margin-right: 20px;
+    margin-top: 40px;
+}
 }
 /* ===== Banner Area  Start */
 #banner_area{

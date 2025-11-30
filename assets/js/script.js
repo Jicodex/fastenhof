@@ -11,7 +11,7 @@ document.querySelectorAll(".package-group").forEach(group => {
 });
 
 // ========================
-// 2. Mobile Menu Toggle
+// 2. Mobile Menu Toggle + Auto Close (Except Mega Menu)
 // ========================
 const toggler = document.querySelector(".menu-toggle");
 const menu = document.getElementById("navbarSupportedContent");
@@ -22,8 +22,10 @@ if (menu && toggler) {
 
   document.querySelectorAll("#navbarSupportedContent .nav-link").forEach(link => {
     link.addEventListener("click", () => {
-      const bsCollapse = new bootstrap.Collapse(menu, { toggle: false });
-      bsCollapse.hide();
+      if (!link.closest(".mega-dropdown")) {
+        const bsCollapse = new bootstrap.Collapse(menu, { toggle: false });
+        bsCollapse.hide();
+      }
     });
   });
 }
@@ -36,9 +38,10 @@ const footerSections = document.querySelectorAll(".footer_manu .col-12, .footer_
 footerSections.forEach(section => {
   const title = section.querySelector("h4");
   const list = section.querySelector("ul");
+
   if (title && list) {
     title.addEventListener("click", e => {
-      e.stopPropagation(); // Prevent conflict with outside clicks
+      e.stopPropagation();
       footerSections.forEach(s => { if (s !== section) s.classList.remove("footer-open"); });
       section.classList.toggle("footer-open");
     });
@@ -53,7 +56,7 @@ const sidebarHeader = document.querySelector(".sidebar_card_header");
 
 if (sidebar && sidebarHeader) {
   sidebarHeader.addEventListener("click", e => {
-    e.stopPropagation(); // Prevent conflict
+    e.stopPropagation();
     sidebar.classList.toggle("active");
   });
 }
@@ -71,7 +74,7 @@ document.querySelectorAll('.show_hide_button').forEach(button => {
     content.classList.toggle('active');
     icon.classList.toggle('rotate');
 
-    this.innerHTML = content.classList.contains('active') 
+    this.innerHTML = content.classList.contains('active')
       ? `weniger Zimmerdetails <img class="arrow_icon rotate" src="assets/img/icons/down_arrow_black.svg">`
       : `mehr Zimmerdetails <img class="arrow_icon" src="assets/img/icons/down_arrow_black.svg">`;
   });
@@ -84,8 +87,15 @@ document.querySelectorAll('.plus_minus_mode').forEach(box => {
   const input = box.querySelector("input");
   if (!input) return;
 
-  box.querySelector(".plus")?.addEventListener("click", e => { e.preventDefault(); input.value = Number(input.value) + 1; });
-  box.querySelector(".minus")?.addEventListener("click", e => { e.preventDefault(); if(input.value > 0) input.value = Number(input.value) - 1; });
+  box.querySelector(".plus")?.addEventListener("click", e => {
+    e.preventDefault();
+    input.value = Number(input.value) + 1;
+  });
+
+  box.querySelector(".minus")?.addEventListener("click", e => {
+    e.preventDefault();
+    if (input.value > 0) input.value = Number(input.value) - 1;
+  });
 });
 
 // ========================
@@ -96,8 +106,8 @@ window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
   const scroll = window.scrollY;
 
-  if(topNav && header){
-    if(scroll > 50){
+  if (topNav && header) {
+    if (scroll > 50) {
       topNav.classList.add('sticky');
       header.classList.add('sticky');
     } else {
@@ -108,51 +118,66 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================
-// 8. Dropdowns and Date Picker
+// 8. Dropdowns + Date Picker
 // ========================
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdowns = document.querySelectorAll(".dropdown-menu");
-  const selectBoxes = document.querySelectorAll(".select-box");
+const dropdowns = document.querySelectorAll(".dropdown-menu");
+const selectBoxes = document.querySelectorAll(".select-box");
 
-  const closeAllDropdowns = () => dropdowns.forEach(dd => dd.style.display = "none");
+const closeAllDropdowns = () => dropdowns.forEach(dd => dd.style.display = "none");
 
-  // Open dropdown on select-box click
-  selectBoxes.forEach((box, index) => {
-    box.addEventListener("click", e => {
+selectBoxes.forEach((box) => {
+  box.addEventListener("click", e => {
+    e.stopPropagation();
+    closeAllDropdowns();
+
+    const menu = document.getElementById(box.dataset.dd);
+    if (menu) {
+      menu.style.left = "10px";
+      menu.style.top = "100%";
+      menu.style.display = "block";
+    }
+  });
+});
+
+document.querySelectorAll(".option").forEach(option => {
+  option.addEventListener("click", () => {
+    const parent = option.closest(".dropdown-menu");
+    if (!parent) return;
+    const box = document.querySelector(`.select-box[data-dd="${parent.id}"]`);
+    if (box) box.querySelector("span").textContent = option.textContent;
+    parent.style.display = "none";
+  });
+});
+
+document.querySelectorAll(".date-box").forEach(box => {
+  const input = box.querySelector(".date-input");
+  if (!input) return;
+
+  box.addEventListener("click", e => { e.stopPropagation(); input.showPicker(); });
+  input.addEventListener("change", e => box.querySelector("span").textContent = e.target.value);
+});
+
+document.addEventListener("click", closeAllDropdowns);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const megaItem = document.querySelector(".mega-dropdown");
+  const megaToggle = megaItem.querySelector(".mega-toggle");
+  const megaMenu = megaItem.querySelector(".mega-menu");
+
+  megaToggle.addEventListener("click", function (e) {
+    if (window.innerWidth < 992) {
+      e.preventDefault();
       e.stopPropagation();
-      closeAllDropdowns();
 
-      const menu = document.getElementById(box.dataset.dd);
-      if(menu){
-        menu.style.left = "10px";
-        menu.style.top = "100%";
-        menu.style.display = "block";
-      }
-    });
+      megaItem.classList.toggle("open");
+
+      megaMenu.style.display =
+        megaMenu.style.display === "block" ? "none" : "block";
+    }
   });
 
-  // Dropdown option click
-  document.querySelectorAll(".option").forEach(option => {
-    option.addEventListener("click", e => {
-      e.stopPropagation();
-      const parent = option.closest(".dropdown-menu");
-      if(!parent) return;
-
-      const index = parent.id === "dd1" ? 0 : 1;
-      selectBoxes[index].querySelector("span").textContent = option.textContent;
-      parent.style.display = "none";
-    });
+  // Prevent menu from closing when clicking inside mega menu
+  megaMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
   });
-
-  // Calendar picker
-  document.querySelectorAll(".date-box").forEach(box => {
-    const input = box.querySelector(".date-input");
-    if(!input) return;
-
-    box.addEventListener("click", e => { e.stopPropagation(); input.showPicker(); });
-    input.addEventListener("change", e => box.querySelector("span").textContent = e.target.value);
-  });
-
-  // Close dropdowns on outside click
-  document.addEventListener("click", () => closeAllDropdowns());
 });
