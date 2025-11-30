@@ -1767,30 +1767,33 @@ input:focus-visible {
 
 /* Hide default checkbox */
 .part_one_card .custom-checkbox input {
-  display: none;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2; /* ensure it’s above other elements */
 }
 
-/* Custom checkbox box */
 .part_one_card .custom-checkbox .checkmark {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  background: #FFFFFF;
-  position: relative;
-  transition: 0.2s ease;
-  z-index: 9999 !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    position: relative;
+    transition: 0.2s ease;
 }
 
-/* Checked style */
+/* show checked state */
 .part_one_card .custom-checkbox input:checked + .checkmark {
-  border-color: transparent;     /* সবুজ বর্ডার */
-  background: transparent;       /* সবুজ ব্যাকগ্রাউন্ড */
+    background: #0b141d; /* example color when checked */
 }
 
 /* Tick icon */
 .part_one_card .custom-checkbox input:checked + .checkmark::after {
   content: "✔";
-  color: white;
+  color: var(--green-color);
   font-size: 14px;
   position: absolute;
   left: 2px;
